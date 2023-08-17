@@ -192,7 +192,7 @@ from a CharacterBody2D or any other collision object node:
 
     func _physics_process(delta):
         var space_state = get_world_2d().direct_space_state
-        var query = PhysicsRayQueryParameters2D.create(global_position, enemy_position)
+        var query = PhysicsRayQueryParameters2D.create(global_position, player_position)
         query.exclude = [self]
         var result = space_state.intersect_ray(query)
 
@@ -205,7 +205,7 @@ from a CharacterBody2D or any other collision object node:
         public override void _PhysicsProcess(double delta)
         {
             var spaceState = GetWorld2D().DirectSpaceState;
-            var query = PhysicsRayQueryParameters2D.Create(globalPosition, enemyPosition);
+            var query = PhysicsRayQueryParameters2D.Create(globalPosition, playerPosition);
             query.Exclude = new Godot.Collections.Array<Rid> { GetRid() };
             var result = spaceState.IntersectRay(query);
         }
