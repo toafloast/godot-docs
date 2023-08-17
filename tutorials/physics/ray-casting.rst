@@ -179,7 +179,7 @@ about the world around it. One problem with this is that the same character
 has a collider, so the ray will only detect its parent's collider,
 as shown in the following image:
 
-.. image:: img/raycast_falsepositive.png
+.. image:: img/raycast_falsepositive.webp
 
 To avoid self-intersection, the ``intersect_ray()`` parameters object can take an
 array of exceptions via its ``exclude`` property. This is an example of how to use it 
