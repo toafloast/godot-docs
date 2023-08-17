@@ -231,7 +231,7 @@ member variable. The array of exceptions can be supplied as the last argument as
 
     func _physics_process(delta):
         var space_state = get_world_2d().direct_space_state
-        var query = PhysicsRayQueryParameters2D.create(global_position, enemy_position, 
+        var query = PhysicsRayQueryParameters2D.create(global_position, target_position, 
             collision_mask, [self]) 
         var result = space_state.intersect_ray(query)
 
@@ -244,7 +244,7 @@ member variable. The array of exceptions can be supplied as the last argument as
         public override void _PhysicsProcess(double delta)
         {
             var spaceState = GetWorld2D().DirectSpaceState;
-            var query = PhysicsRayQueryParameters2D.Create(globalPosition, enemyPosition,
+            var query = PhysicsRayQueryParameters2D.Create(globalPosition, targetPosition,
                 CollisionMask, new Godot.Collections.Array<Rid> { GetRid() });
             var result = spaceState.IntersectRay(query);
         }
